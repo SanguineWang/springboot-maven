@@ -1,10 +1,10 @@
 # springboot Course
 ## 基于maven创建项目
-####1. 创建README.md文件
-####2. 版本控制文件 .gitignore文件
-####3. 启动版本控制 vcs
-####4. 创建springboot 项目的 Module
-####5. 添加maven依赖
+#### 1. 创建README.md文件
+#### 2. 版本控制文件 .gitignore文件
+#### 3. 启动版本控制 vcs
+#### 4. 创建springboot 项目的 Module
+#### 5. 添加maven依赖
 ```
  <!-- bug?? 运行测试时IDEA缺少junit-platform-launcher，必须显示声明依赖 -->
         <dependency>
