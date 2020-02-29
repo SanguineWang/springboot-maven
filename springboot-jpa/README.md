@@ -1,4 +1,4 @@
-##JPA
+## JPA
     2020.02.29
     基本基于Springboot的spring-data-jpa项目
     基本JPA实体类注解
@@ -22,7 +22,7 @@ logging.level.com.example=debug
 logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} %-5level %C.%M[%line] - %msg%n
 # 时间；日志级别；类；方法；行(行不能使用圆括号)
 ````
-###JPA-Entity注解
+### JPA-Entity注解
 * 类头注解
 ````
 @Data  
