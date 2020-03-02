@@ -65,3 +65,43 @@ logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} %-5level %C.%M[%line] - %msg%n
 private EntityManager manager;
 #注入实体管理器 可调用 persist插入实体到数据库
 ````
+### Entity Relationships实体关系 
+
+关系被维护端： 必须声明放弃关系的维护  
+例如：
+```
+@Data
+@Entity
+@NoArgsConstructor
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String name;
+    private String brithday;
+
+    //mappedBy= "另一端映射的属性名称"
+    @OneToMany(mappedBy = "user")
+    private List<Address> addressList;
+}
+ ```
+关系维护端： 建立关系维护关系 
+例如：
+```
+@Data
+@NoArgsConstructor
+@Entity
+public class Address {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String address;
+   //User 与 Address 关系为一对多
+    @ManyToOne
+    private User user;
+}
+```
+结果：
+被维护端的主键映射为 关系维护端的外键
+
+
