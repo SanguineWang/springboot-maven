@@ -6,7 +6,7 @@
 #### 4. 创建springboot 项目的 Module
 #### 5. 添加maven依赖
 ```
- <!-- bug?? 运行测试时IDEA缺少junit-platform-launcher，必须显示声明依赖 -->
+<!-- bug?? 运行测试时IDEA缺少junit-platform-launcher，必须显示声明依赖 -->
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-launcher</artifactId>
