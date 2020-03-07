@@ -10,6 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @SpringBootTest
 @Slf4j
 @Transactional
@@ -33,5 +35,11 @@ public class PersonTest {
     public void test_findPerson(){
         Person person = personReporsitory.findById(1).orElse(null);
         log.debug("{}",person.getName());
+    }
+    @Test
+    @DisplayName("测试findAll")
+    public  void  testfindAll(){
+        List<Person> people=personReporsitory.findAll();
+        log.debug("{}",people);
     }
 }
