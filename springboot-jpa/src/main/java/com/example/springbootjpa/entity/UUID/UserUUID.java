@@ -1,4 +1,4 @@
-package com.example.springbootjpa.entity;
+package com.example.springbootjpa.entity.UUID;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

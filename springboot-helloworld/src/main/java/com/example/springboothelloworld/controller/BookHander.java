@@ -1,7 +1,7 @@
-package com.example.springbootjpa.controller;
+package com.example.springboothelloworld.controller;
 
-import com.example.springbootjpa.entity.repository.Person;
-import com.example.springbootjpa.repository.PersonReporsitory;
+import com.example.springboothelloworld.entity.Book;
+import com.example.springboothelloworld.repository.BookReporsitory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,13 +11,13 @@ import java.util.List;
 
 //@Controller
 @RestController
-@RequestMapping("/pepole")
-public class PersonHander {
+@RequestMapping("/book")
+public class BookHander {
     @Autowired
-    private PersonReporsitory personReporsitory;
+    private BookReporsitory bookReporsitory;
     @GetMapping("/findall")
-    public List<Person> findall() {
-        return personReporsitory.findAll();
+    public List<Book> findall() {
+        return bookReporsitory.findAll();
     }
 }
 
