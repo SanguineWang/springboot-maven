@@ -13,8 +13,6 @@ public class BaseReporsitoryImpl<T, ID> extends SimpleJpaRepository<T, ID>  impl
         this.manager=entityManager;
     }
 
-
-
     @Override
     public void refresh(T t) {
       manager.refresh(t);
